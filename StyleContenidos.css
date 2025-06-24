@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-image: url(https://preview.redd.it/heres-the-tears-of-the-kingdom-background-as-a-desktop-v0-76ir9l73a1ua1.png?width=1080&crop=smart&auto=webp&s=f321d1b9336b6f73d048ac0743190ee6ccddc6f8);
+    backdrop-filter: opacity(50%);
+}
+
+.footer {
+    display: flex;
+    background-color: #120c1d;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 1em;
+    padding: 1.5rem;
+    justify-content: center;
+}
+.FilterAndSerach {
+    margin-top: 1rem;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ListaCategorias {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+.buttons__secondary {
+    text-decoration: none;
+    color: rgb(206, 211, 211);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-style: normal;
+    border-radius: 1rem;
+    background-color: #111519;
+    padding: .6rem;
+}
+.buttons__secondary:hover {
+    color: rgb(202, 202, 57);
+}
+.Categoria:hover {
+    transform: scale(1.08);
+    filter: brightness(1.25);
+}
+
+.SearchBar {
+    display: flex;
+    align-items: center;
+}
+
+#Busqueda {
+    background-color: #01060700;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    width: 30rem;
+    min-height: 2.5rem;
+}
+
+.SearchBar.a {
+    text-decoration: none;
+}
+
+#Lupa {
+    text-decoration: none;
+    font-size: 34px;
+    color: whitesmoke;
+}
+
+#Lupa:hover {
+    transform: scale(1.1);
+}
+
+.ContainerContenidos {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    box-sizing: border-box;
+    gap: 1.5rem;
+}
+
+.PosterContenidos {
+    border-radius: 1.5rem;
+    object-fit: fill;
+    max-width: 100%;
+    height: 100%;
+}
+
+.CardsContenidos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CardsContenidos:hover {
+    filter: brightness(1.2);
+}
+
+.CardInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    width: 90%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-blend-mode: difference;
+    background-color: rgba(0, 0, 0, 0.897);
+    border-radius: 1rem;
+    text-size-adjust: none;
+}
+
+.TarjetaPelicula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.TarjetaPelicula:hover {
+    filter: brightness(1.2);
+}
+
+@media screen and (max-width: 1024px) {
+    .ContainerContenidos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .FilterAndSerach{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .ListaCategorias{
+        justify-self: center;
+    }
+    #Busqueda{
+        width: 50vw;
+    }
+}
+    @media screen and (max-width: 768px) {
+        .ContainerContenidos {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1rem;
+            justify-content: center;
+        }
+    }
+@media screen and (max-width: 600px) {
+      .ContainerContenidos {
+        grid-template-columns: repeat(1, 0.8fr);
+        grid-template-rows:auto;
+        justify-content: center;
+      }
+    }

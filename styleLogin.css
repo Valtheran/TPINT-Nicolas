@@ -1,0 +1,344 @@
+html,
+body {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://preview.redd.it/heres-the-tears-of-the-kingdom-background-as-a-desktop-v0-76ir9l73a1ua1.png?width=1080&crop=smart&auto=webp&s=f321d1b9336b6f73d048ac0743190ee6ccddc6f8);
+    backdrop-filter: opacity(50%);
+}
+
+/* INDEX STYLES */
+
+
+.login-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-unflix {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.nav-unflix h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nav-unflix label {
+    font-size: 100px;
+    color: white;
+    font-family: "Poppins";
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.nav-unflix p {
+    font-size: 20px;
+    letter-spacing: 7px;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.formularioLogin form {
+    display: flex;
+    background-color: #000000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    margin: 0 auto;
+    padding: 10%;
+}
+
+
+.formularioLogin {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 10%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.formularioLogin a {
+    color: rgb(129, 123, 123);
+    font-family: "Poppins", sans-serif;
+}
+
+
+.formularioLogin button{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+/* FOOTER */
+
+
+
+.footer-login {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+
+/* RECUPERAR CONTRASEÑA STYLES */
+
+
+.recupero-container {
+    display: flex;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloRecupero {
+    font-size: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+}
+
+
+.recuperoForm {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    padding: 10%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.recuperoForm form {
+    display: flex;
+    background-color: #000000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    margin: 0 auto;
+    padding: 10%;
+
+}
+
+.recuperoForm label {
+    text-align: center;
+}
+
+.recuperoForm button a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* CREAR USUARIO STYLES */
+
+.crearContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: black;
+}
+
+.registrarseForm {
+    top: 15%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 10%;
+    font-size: 24px;
+    background-color: aliceblue;
+}
+
+
+.crearLoginIzq form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4, 2fr);
+    align-items: center;
+}
+
+.crearLoginDer{
+    display: grid;
+    gap: 1rem;
+}
+.btnRegContainer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.btn-registrarse {
+    width: 15rem;
+    height: 3rem;
+    background-color: #0cb729;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-registrarse a{
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.logoNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoNav img {
+    width: 40%;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.cancelarButton {
+    width: 15rem;
+    height: 3rem;
+    background-color: #f44336; /* Rojo */
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.cancelarButton a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnRegContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* ----------- Estilos para tablets (>= 600px y < 1024px) ----------- */
+@media screen and (max-width: 1024px) {
+    .registrarseForm {
+        grid-template-columns: 1fr;
+        padding: 5%;
+        font-size: 20px;
+    }
+
+    .crearLoginIzq form {
+        grid-template-columns: 1fr;
+    }
+
+    .crearLoginDer {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-registrarse {
+        font-size: 1rem;
+    }
+    
+    .cancelarButton {
+        font-size: 1rem;
+    }
+
+
+}
+
+/* ----------- Estilos para celular (<= 600px) ----------- */
+@media screen and (max-width: 600px) {
+    .nav-unflix h1 {
+        font-size: 40px;
+    }
+
+    .nav-unflix label {
+        font-size: 50px;
+    }
+
+    .nav-unflix p {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .registrarseForm {
+        grid-template-columns: 1fr;
+        padding: 5%;
+        font-size: 16px;
+        grid-gap: 1rem;
+    }
+
+    .crearLoginIzq form {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .crearLoginDer {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .SecondInputs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-registrarse {
+        font-size: 14px;
+    }
+
+    .cancelarButton {
+        font-size: 14px;
+    }
+
+    .btnRegContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-login {
+        font-size: 12px;
+    }
+}
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <title>PELICULAS - UNFLIX</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="StyleContenidos.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="StyleHeader.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="header__nav">
+
+            <ul class="header__list">
+                <li>
+                    <div class="SiteIcon"><img id="Icon" src="./img/icons/smoke.png">Pucho-Flix</div>
+                </li>
+                <li class="header__listItem">
+                    <a class="buttons_primary" href="./home.html"><span class="material-icons">home</span>HOME</a>
+                </li>
+                <li class="header__listItem">
+                    <a class="buttons_primary" href="./series.html"><span
+                            class="material-icons">video_library</span>SERIES</a>
+                </li>
+
+                <li class="header__listItem">
+                    <a class="buttons_primary" href="./pelis.html"><span
+                            class="material-icons">movie</span>PELICULAS</a>
+                </li>
+
+                <li class="header__listItem">
+                    <a class="buttons_primary" href="./perfil.html"><span
+                            class="material-icons">account_box</span>PERFIL</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="FilterAndSerach">
+            <ul class="ListaCategorias">
+                <li class="Categoria"><a class="buttons__secondary"
+                        href="file:///C:/Users/pc/TPINT/pelis.html">SUSPENSO</a></li>
+                <li class="Categoria"><a class="buttons__secondary"
+                        href="file:///C:/Users/pc/TPINT/pelis.html">ACCIÓN</a></li>
+                <li class="Categoria"><a class="buttons__secondary" href="file:///C:/Users/pc/TPINT/pelis.html">CIENCIA
+                        FICCIÓN</a></li>
+                <li class="Categoria"><a class="buttons__secondary"
+                        href="file:///C:/Users/pc/TPINT/pelis.html">COMEDIA</a></li>
+                <li class="Categoria"><a class="buttons__secondary"
+                        href="file:///C:/Users/pc/TPINT/pelis.html">DRAMA</a></li>
+                <li class="Categoria"><a class="buttons__secondary"
+                        href="file:///C:/Users/pc/TPINT/pelis.html">ROMANCE</a></li>
+                <li class="Categoria"><a class="buttons__secondary"
+                        href="file:///C:/Users/pc/TPINT/pelis.html">DOCUMENTAL</a></li>
+            </ul>
+
+            <div class="SearchBar">
+                <input name="Busqueda" id="Busqueda" type="search" placeholder="BUSCAR POR NOMBRE">
+                <a id="Lupa" class="material-icons" href="file:///C:/Users/pc/TPINT/pelis.html">search</a>
+            </div>
+        </div>
+
+        <div class="ContainerContenidos" id="contenedorPeliculas">
+        </div>
+    </main>
+
+    <script src="json-data/peliculas.js"></script>
+
+    <script>
+        const peliculas = DATA_PELICULAS;
+        const contenedor = document.getElementById("contenedorPeliculas");
+
+        peliculas.forEach((pelicula, index) => {
+            const card = document.createElement("div");
+            card.className = "TarjetaPelicula";
+
+            card.innerHTML = `
+    <a href="DetallePeli.html?id=${index}">
+      <img class="PosterContenidos" src="${pelicula.portadaJPG}" alt="${pelicula.titulo}">
+    </a>
+    <ul class="CardInfo">
+      <li>${pelicula.rating}</li>
+      <li>${pelicula.estreno}</li>
+      <li>${pelicula.duracion} mins</li>
+      <li>${pelicula.clasificacion}</li>
+    </ul>
+  `;
+
+            contenedor.appendChild(card);
+        });
+    </script>
+
+    <footer class="footer-login">
+        <p>Creado por Marcos Diaz, Alejo Gonzalez, Franco Nicolas Perez, Nicolas Reynoso </p>
+</body>
+
+</html>
